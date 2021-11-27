@@ -1,0 +1,19 @@
+  # Use postgres/example user/password credentials
+version: '3.7'
+
+services:
+
+  postgres_cadastro:
+    container_name: postgres_cadastro
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: cadastro
+      POSTGRES_PASSWORD: cadastro
+
+
+    ports:
+      - 5432:5432
+  
+  
+ 

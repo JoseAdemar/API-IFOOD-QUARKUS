@@ -1,0 +1,11 @@
+package com.projeto.ifood.cadastro;
+
+import javax.persistence.Entity;
+
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
+@Entity
+public class Restaurante extends PanacheEntityBase {
+
+	 
+}

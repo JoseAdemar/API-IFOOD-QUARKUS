@@ -1,0 +1,12 @@
+package com.projeto.ifood.cadastro;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "prato")
+public class Prato {
+	
+	
+
+}
