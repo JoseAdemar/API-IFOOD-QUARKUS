@@ -3,6 +3,7 @@ package com.projeto.ifood.cadastro;
 import java.util.List;
 import java.util.Optional;
 
+import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -19,11 +20,17 @@ import javax.ws.rs.core.Response.Status;
 
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
+import com.projeto.ifood.cadastro.dto.AdicionarRestauranteDTO;
+import com.projeto.ifood.cadastro.dto.RestauranteMapper;
+
 @Path("/restaurantes")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 
 public class RestauranteResource {
+	
+	@Inject
+	RestauranteMapper restauranteMapper;
 
 	@GET
 	@Tag(name = "restaurante")
@@ -48,8 +55,9 @@ public class RestauranteResource {
 	@POST
 	@Transactional
 	@Tag(name = "restaurante")
-	public void adicionar(Restaurante dto) {
-		dto.persist();
+	public void adicionar(AdicionarRestauranteDTO dto) {
+		Restaurante restaurante = restauranteMapper.toRestaurante(dto);
+		restaurante.persist();
 
 		Response.status(Status.CREATED).build();
 

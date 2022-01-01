@@ -1,7 +1,0 @@
-quarkus.datasource.db-kind=postgresql
-quarkus.datasource.jdbc.url=jdbc:tracing:postgresql://localhost:5432/postgres
-quarkus.datasource.jdbc.driver=org.postgresql.Driver
-quarkus.hibernate-orm.dialect=org.hibernate.dialect.PostgreSQL8Dialect
-quarkus.hibernate-orm.database.generation=update
-quarkus.datasource.username=cadastro
-quarkus.datasource.password=cadastro
