@@ -48,4 +48,6 @@
     <fullyQualifiedTypeName name="com.projeto.ifood.cadastro.dto.RestauranteMapper"/>
     <fullyQualifiedTypeName name="com.projeto.ifood.cadastro.dto.AdicionarRestauranteDTO"/>
     <fullyQualifiedTypeName name="com.projeto.ifood.cadastro.Restaurante"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotEmpty"/>
 </qualifiedTypeNameHistroy>
